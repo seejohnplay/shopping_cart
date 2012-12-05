@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmatic Catalog</h1>
+<h1>Your Pragmatic Catalog <% if session[:counter] > 5 %> (You have viewed this <%= pluralize(session[:counter], 'time') %>) <% end %></h1>
 
 <% @products.each do |product| %>
 	<div class="entry">
